@@ -18,24 +18,23 @@
             console.log(value)
             let output = "";
             response.forEach((response) => {
-                output += `<div>
-                <div class="card cardd" >
+                output += `<div class="container card cards-list">
+                    
                     <div class="card-body">
-                        <div class="card-body">
-                    <img id="ajaxdiverimg" src= "${response.image}"/>
-                    <ul> 
-                        <li> ${response.title} </li>
-                        <li> Price : ${response.price} </li>
-                        <li> ${response.description} </li>
-                        <li> ${response.category} </li>
-                        <li> ${response.rating.rate} </li>
-                        <li> ${response.rating.count} </li>
-                        <a class="thebutton" href="#" class="btn btn-primary">add to cart</a>
-                    </ul>
-                            </div>
-                        </div>
+                    <div class="card_image">
+                    <img class="card-img-top" id="ajaximg" src= "${response.image}"/>
                     </div>
-                  </div>`
+                    <ul class="card-text ajaxul">
+                        <li class="ajaxtitleli card_title"> ${response.title} </li>
+                        <li class="ajaxli"> Price : ${response.price} </li>
+                        <li class="ajaxli"> ${response.description} </li>
+                        <li class="ajaxli"> Category: ${response.category} </li>
+                        <li class="ajaxli"> The product rating: ${response.rating.rate} </li>
+                        <li class="ajaxli"> ${response.rating.count} </li>
+                        <a href="#" class="btn btn-primary thebutton">add to cart</a>
+                    </ul>
+                    </div>
+                </div>`
                 // console.log(response.rating);
             
                 
