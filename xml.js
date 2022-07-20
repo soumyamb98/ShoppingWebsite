@@ -1,11 +1,11 @@
 // $(document).ready(function () {
     const xhttp = new XMLHttpRequest();
-    var cardbody = document.getElementById("cardbody");
+    // var cardbody = document.getElementById("cardbody");
 
 
 
 
-    xhttp.open("GET", "https://fakestoreapi.com/products", true);
+    
     
     
     xhttp.onload = function () {
@@ -45,7 +45,8 @@
                 
             })
             
-            cardbody.innerHTML = output;
+            // cardbody.innerHTML = output;
+            document.getElementById("cardbody").innerHTML = output;
             
         }
 
@@ -53,6 +54,7 @@
     }
 
     
+    xhttp.open("GET", "https://fakestoreapi.com/products", true);
     xhttp.send();
 
 // })
